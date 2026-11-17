@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class NeedsUI : MonoBehaviour
 {
+    // We define the values of the sliders 
     public Needs playerNeeds;
 
     public Slider hungerSlider;
@@ -27,6 +28,7 @@ public class NeedsUI : MonoBehaviour
         if (playerNeeds != null)
             playerNeeds.OnNeedsChanged -= UpdateUI;
     }
+
 
     void UpdateUI()
     {
