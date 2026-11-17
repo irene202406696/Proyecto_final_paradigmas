@@ -1,4 +1,5 @@
 # Unity generated folders
+# Unity
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -22,6 +23,23 @@
 *.user
 *.userprefs
 *.pidb
+/[Aa]ssets/Plugins/Editor/JetBrains*
+
+# Visual Studio / Rider
+.vs/
+.vscode/
+.idea/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
 *.pdb
 *.mdb
 *.opendb
@@ -37,3 +55,16 @@ crashlytics-buildid.txt
 # OS
 .DS_Store
 Thumbs.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Varios
+sysinfo.txt
+crashlytics-build.properties
+*.apk
+*.aab
+*.unitypackage
+.DS_Store
+Thumbs.db
+*.slnx
