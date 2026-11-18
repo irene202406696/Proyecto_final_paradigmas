@@ -1,0 +1,58 @@
+
+using System;
+using UnityEngine;
+
+public class Needs : MonoBehaviour
+{
+    // We define each need and how much it decreases over time 
+    [Header("Necesidades (0-100)")]
+    [Range(0, 100)] public float hunger = 100f;
+    [Range(0, 100)] public float energy = 100f;
+    [Range(0, 100)] public float hygiene = 100f;
+    [Range(0, 100)] public float social = 100f;
+
+    [Header("Reducción por segundo")]
+    public float hungerDecay = 0.5f;
+    public float energyDecay = 0.3f;
+    public float hygieneDecay = 0.2f;
+    public float socialDecay = 0.2f;
+
+    // It serves to indicate that needs have changed 
+    public event Action OnNeedsChanged;
+
+    // With this function we update the needs as time goes by 
+    void Update()
+    {
+        hunger = Mathf.Max(0, hunger - hungerDecay * Time.deltaTime);
+        energy = Mathf.Max(0, energy - energyDecay * Time.deltaTime);
+        hygiene = Mathf.Max(0, hygiene - hygieneDecay * Time.deltaTime);
+        social = Mathf.Max(0, social - socialDecay * Time.deltaTime);
+
+        OnNeedsChanged?.Invoke();
+    }
+
+    // When the character eats, showers, etc. We add up a certain amount 
+    public void RestoreHunger(float amount)
+    {
+        hunger = Mathf.Clamp(hunger + amount, 0, 100);
+        OnNeedsChanged?.Invoke();
+    }
+
+    public void RestoreEnergy(float amount)
+    {
+        energy = Mathf.Clamp(energy + amount, 0, 100);
+        OnNeedsChanged?.Invoke();
+    }
+
+    public void RestoreHygiene(float amount)
+    {
+        hygiene = Mathf.Clamp(hygiene + amount, 0, 100);
+        OnNeedsChanged?.Invoke();
+    }
+
+    public void RestoreSocial(float amount)
+    {
+        social = Mathf.Clamp(social + amount, 0, 100);
+        OnNeedsChanged?.Invoke();
+    }
+}

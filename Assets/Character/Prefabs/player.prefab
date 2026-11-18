@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1275211489274828531}
   - component: {fileID: 8769449171771766158}
   - component: {fileID: 2687661333609838954}
+  - component: {fileID: 7203848166827718507}
   m_Layer: 0
   m_Name: player
   m_TagString: MainCamera
@@ -178,3 +179,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   speed: 4
   mouseSensitivity: 0.3
+--- !u!114 &7203848166827718507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4112578112327259786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c628d690a7c9d4b9f40b5557b0d7e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractionController
+  playerCamera: {fileID: 3201743418018650093}
+  playerNeeds: {fileID: 0}
+  interactionDistance: 3
