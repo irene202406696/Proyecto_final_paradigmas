@@ -284,6 +284,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 422715d912a037a4184f618372e9841f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1061137877}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 422715d912a037a4184f618372e9841f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1061137880}
   m_SourcePrefab: {fileID: 100100000, guid: 422715d912a037a4184f618372e9841f, type: 3}
 --- !u!4 &70796661 stripped
 Transform:
@@ -6106,6 +6109,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 11.9, y: 4.2, z: 5.6}
   m_Center: {x: 5.95, y: 2.1, z: 2.8}
+--- !u!114 &1061137880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061137874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef786efd70553c34b9763efd5fdac896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shower
+  showerTime: 5
+  maxHygieneToShower: 80
+  steam: 0.4000000059604645
+  fadeTime: 0.5
 --- !u!1 &1065100435 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 03398647ae0c8074d860e11095086597, type: 3}
@@ -8342,6 +8361,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 502b47eb1fc3d81469804b17bc5df922, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1759379317}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 502b47eb1fc3d81469804b17bc5df922, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1759379320}
   m_SourcePrefab: {fileID: 100100000, guid: 502b47eb1fc3d81469804b17bc5df922, type: 3}
 --- !u!4 &1459259013 stripped
 Transform:
@@ -10365,6 +10387,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 12.800003, y: 24.92671, z: 12.800003}
   m_Center: {x: 6.4000015, y: 12.463355, z: 6.400009}
+--- !u!114 &1759379320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759379314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef786efd70553c34b9763efd5fdac896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shower
+  showerTime: 5
+  maxHygieneToShower: 80
+  steam: 0.4000000059604645
+  fadeTime: 0.5
 --- !u!1 &1767778443
 GameObject:
   m_ObjectHideFlags: 0
