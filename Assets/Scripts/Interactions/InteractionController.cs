@@ -68,6 +68,14 @@ public class InteractionController : MonoBehaviour
                     {
                         ShowTemporaryMessage("¡Has comido! Quedan " + fridge.currentFood + " raciones.");
                     }
+
+                    Bed bed = hit.collider.GetComponentInParent<Bed>();
+
+                    if (bed != null && !bed.IsSleeping)
+                    {
+                        ShowTemporaryMessage("No tienes sueño");
+                    }
+             
                 }
             }
         }
