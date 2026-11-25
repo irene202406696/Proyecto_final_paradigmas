@@ -8,14 +8,14 @@ public class InteractionController : MonoBehaviour
 {
     public Camera playerCamera;
     public Needs playerNeeds;
-    public float interactionDistance = 3f;
+    public double interactionDistance = 3f;
 
     public TextMeshProUGUI interactionText;
 
     private Coroutine messageCoroutine;
     private bool showingTemporaryMessage = false; //Indicates if we are showing a message 
 
-    private float messageEndTime = 0f;
+    private double messageEndTime = 0f;
 
     void Start()
     {
@@ -46,7 +46,7 @@ public class InteractionController : MonoBehaviour
         Ray ray = new Ray(playerCamera.transform.position,playerCamera.transform.forward);
         
         // If the ray is collading with a collider 
-        if (Physics.Raycast(ray, out RaycastHit hit,interactionDistance))
+        if (Physics.Raycast(ray, out RaycastHit hit,(float)interactionDistance))
         {
             // We check if the collider is an interactive object (implements IInteractable)
             IInteractable interactable = hit.collider.GetComponentInParent<IInteractable>();
@@ -74,6 +74,13 @@ public class InteractionController : MonoBehaviour
                     if (bed != null && !bed.IsSleeping)
                     {
                         ShowTemporaryMessage("No tienes sueño");
+                    }
+
+                    Computer computer = hit.collider.GetComponentInParent<Computer>();
+
+                    if (computer != null && !computer.IsStudying)
+                    {
+                        ShowTemporaryMessage("Necesitas todas las barras por encima de " + computer.minNeedsToStart + " para estudiar");
                     }
              
                 }

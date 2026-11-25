@@ -11,6 +11,8 @@ public class NeedsUI : MonoBehaviour
     public Slider energySlider;
     public Slider hygieneSlider;
     public Slider socialSlider;
+    public Slider studySlider;
+
 
     void OnEnable()
     {
@@ -34,9 +36,10 @@ public class NeedsUI : MonoBehaviour
     {
         if (playerNeeds == null) return;
 
-        hungerSlider.value = playerNeeds.hunger;
-        energySlider.value = playerNeeds.energy;
-        hygieneSlider.value = playerNeeds.hygiene;
-        socialSlider.value = playerNeeds.social;
+        hungerSlider.value = (float)playerNeeds.hunger;
+        energySlider.value = (float)playerNeeds.energy;
+        hygieneSlider.value = (float)playerNeeds.hygiene;
+        socialSlider.value = (float)playerNeeds.social;
+        studySlider.value = (float)playerNeeds.study;
     }
 }
